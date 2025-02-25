@@ -1,0 +1,12 @@
+kubectl create configmap mysql-config --from-literal=mysql_root_password=root123 --from-literal=mysql_database=mydb --from-literal=mysql_user=user123 --from-literal=mysql_password=pass123
+
+kubectl exec -it mysql-deployment-6c7bbfc446-frbkw -- bash
+mysql -h localhost -u root -p
+
+[Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hasan786"))
+
+[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String("aGFzYW43ODY="))
+
+
+kubectl create secret generic mysql-secret --from-literal=mysql_root_password=root123 --from-literal=mysql_database=mydb --from-literal=mysql_user=user123 --from-literal=mysql_password=pass123
+
